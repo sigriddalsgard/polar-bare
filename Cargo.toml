@@ -1,0 +1,12 @@
+[package]
+name = "polar-bare"
+edition = "2024"
+publish = false
+
+[lib]
+crate-type = ["staticlib"]
+path = "binding.rs"
+
+[dependencies]
+bare-rust = "0.0.18"
+polars = { version = "0.51.0", features = ["json", "lazy", "polars-ops", "strings", "regex", "temporal", "dtype-date", "dtype-datetime", "string_pad", "string_reverse", "month_start", "month_end", "abs", "log", "round_series", "trigonometry", "sign", "is_in", "is_between", "rank", "diff", "top_k"] }
